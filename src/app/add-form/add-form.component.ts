@@ -9,4 +9,8 @@ export class AddFormComponent {
 
   workingHours = [40, 30, 20];
 
+  //TODO button click event
+  //TODO workPlace renderelés
+  //TODO beosztás renderelés
+
 }
