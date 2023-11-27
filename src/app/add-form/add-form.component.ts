@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AddFormComponent {
 
+  workingHours = [40, 30, 20];
+
 }
