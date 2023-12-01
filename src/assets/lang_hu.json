@@ -1,0 +1,14 @@
+{
+    "nav":{
+        "menu":[
+            {"text":"Kezdőoldal", "link":"home"},
+            {"text":"Munkavállalók", "link":"workers"},
+            {"text":"Távollétek", "link":"absences"},
+            {"text":"Beosztás", "link": "schedule"},
+            {"text":"Adatfelvitel", "link": "forms"},
+            {"text":"Kimutatások", "link": "lists"}
+        ],
+        "login":"Belépés",
+        "logout":"Kilépés"
+    }
+}
