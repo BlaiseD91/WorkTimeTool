@@ -19,6 +19,10 @@ export class ConfigService {
     )
   }
 
+  getConfig(){
+    return this.configSub
+  }
+
 
 
 }

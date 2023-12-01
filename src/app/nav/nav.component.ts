@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
 
+  messages:any
+
+  constructor(private config:ConfigService) {
+  }
 }
