@@ -6,17 +6,31 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddFormComponent } from './add-form/add-form.component';
 import { NavComponent } from './nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { WorkersComponent } from './workers/workers.component';
+import { AbsencesComponent } from './absences/absences.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ListsComponent } from './lists/lists.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddFormComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    WorkersComponent,
+    AbsencesComponent,
+    ScheduleComponent,
+    ListsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

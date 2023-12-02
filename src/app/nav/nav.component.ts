@@ -11,5 +11,10 @@ export class NavComponent {
   messages:any
 
   constructor(private config:ConfigService) {
+    config.getConfig().subscribe(
+      (response:any) => {
+        this.messages = response.nav.menu
+      }
+    )
   }
 }
