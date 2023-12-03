@@ -9,11 +9,13 @@ import { ConfigService } from '../config.service';
 export class NavComponent {
 
   messages:any
+  navText:any
 
   constructor(private config:ConfigService) {
     config.getConfig().subscribe(
       (response:any) => {
-        this.messages = response.nav.menu
+        this.messages = response.nav
+        this.navText = response.nav.menu
       }
     )
   }

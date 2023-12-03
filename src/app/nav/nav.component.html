@@ -6,12 +6,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li *ngFor="let item of messages" class="nav-item">
+                <li *ngFor="let item of navText" class="nav-item">
                     <a class="nav-link active" [routerLink]="item.link">{{item.text}}</a>
                 </li>
             </ul>
         </div>
-        <button type="button" class="btn btn-outline-success">Login</button>
+        <button type="button" class="btn btn-outline-success mx-2">{{messages.login}}</button>
+        <!-- TODO:icon -->
+        <button type="button" class="btn btn-outline-danger">{{messages.logout}}</button>
         <!-- TODO:icon -->
     </div>
   </nav>

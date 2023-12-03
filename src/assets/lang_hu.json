@@ -10,5 +10,8 @@
         ],
         "login":"Belépés",
         "logout":"Kilépés"
+    },
+    "add-form":{
+        
     }
 }
