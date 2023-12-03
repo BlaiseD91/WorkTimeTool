@@ -11,7 +11,52 @@
         "login":"Belépés",
         "logout":"Kilépés"
     },
-    "add-form":{
-        
+    "addForm":{
+        "header":"Munkavállaló létrehozása",
+        "form":[
+            {"text":"Munkavállaló neve", "type":"text", "id":"name"},
+            {"text":"Munkavállaló születési ideje", "type":"date", "id":"birthDate"},
+            {"text":"Munkavállaló adószáma", "type":"text", "id":"taxnumber"},
+            {"text":"Munkavállaló társadalombiztosítási azonosítója", "type":"text", "id":"insuranceNumber"},
+            {"text":"Munkavállaló telefonszáma", "type":"tel", "id":"phone"},
+            {"text":"Munkavállaló emailcíme", "type":"email", "id":"email"},
+            {"text":"Válassz egy jelszót", "type":"password", "id":"pass"},
+            {"text":"Add meg újra a jelszót", "type":"password", "id":"repass"},
+            {"text":"Belépés dátuma", "type":"date", "id":"startDate"}
+        ],
+        "select":[
+            {
+                "text":"Válaszd ki a munkavállaló munkavégzési helyét!",
+                "options":[
+                    {"value":"1", "name":"Árkád Budapest"},
+                    {"value":"2", "name":"Aréna Mall"},
+                    {"value":"3", "name":"Westend"},
+                    {"value":"4", "name":"Mom Park"},
+                    {"value":"5", "name":"Árkád Győr"},
+                    {"value":"6", "name":"Árkád Pécs"}
+                ]
+            },
+            {
+                "text":"Válaszd ki a munkavállaló beosztását!",
+                "options":[
+                    {"value":"1", "name":"HR Specialista"},
+                    {"value":"2", "name":"Kereskedelmi asszisztens"},
+                    {"value":"3", "name":"Üzletvezető"},
+                    {"value":"4", "name":"Üzletvezető-helyettes"},
+                    {"value":"5", "name":"Műszakvezető"},
+                    {"value":"6", "name":"Eladó"}
+                ]
+            },
+            {
+                "text":"Válaszd ki a munkavállaló heti óraszámát!",
+                "options":[
+                    {"value":"20", "name":"20"},
+                    {"value":"30", "name":"30"},
+                    {"value":"40", "name":"40"}
+                ]
+            }
+        ],
+        "switch":"Munkavállaló aktiválása",
+        "submitButton":"Mentés"
     }
 }

@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-add-form',
@@ -9,9 +11,17 @@ export class AddFormComponent {
 
   workingHours = [40, 30, 20];
 
+  texts:any
+
+  constructor(private conf:ConfigService){
+    conf.getConfig().subscribe(
+      (response:any) => {
+        this.texts = response.addForm
+      }
+    )
+  }
+
   //TODO button click event
-  //TODO workPlace renderelés
-  //TODO beosztás renderelés
 
   
 

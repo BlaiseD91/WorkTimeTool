@@ -1,87 +1,29 @@
+<!-- TODO: textek kiszervezése lang_hu-ba -->
 <div class="container my-5">
-    <h1 class="text-light">Munkavállaló létrehozása</h1>
-    <form>
-        <div class="container">
-            <div class="row">
-                <div class="mb-3 col-5">
-                  <label for="name" class="form-label text-light">Munkavállaló neve</label>
-                  <input type="text" class="form-control" id="name">
+    <!-- New Worker -->
+    <div class="container">
+        <h1 class="text-light">{{texts.header}}</h1>
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="mb-3 col-5" *ngFor="let item of texts.form">
+                        <label [for]="item.id" class="form-label text-light">{{item.text}}</label>
+                        <input [type]="item.type" class="form-control" [id]="item.id">
+                    </div>
+                    <div class="mb-3 col-5 align-self-end" *ngFor="let item of texts.select">
+                        <select class="form-select">
+                            <option selected>{{item.text}}</option>
+                            <option *ngFor="let option of item.options" [value]="option.value">{{option.name}}</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="mb-3 col-5">
-                    <label for="birthDate" class="form-label text-light">Munkavállaló születési ideje</label>
-                    <input type="date" class="form-control" id="birthDate">
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-5">
-                  <label for="taxnumber" class="form-label text-light">Munkavállaló adószáma</label>
-                  <input type="text" class="form-control" id="taxnumber">
-                </div>
-                <div class="mb-3 col-5">
-                    <label for="insuranceNumber" class="form-label text-light">Munkavállaló társadalombiztosítási azonosítója</label>
-                    <input type="text" class="form-control" id="insuranceNumber">
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-5">
-                    <label for="phone" class="form-label text-light">Munkavállaló telefonszáma</label>
-                    <input type="tel" class="form-control" id="phone">
-                </div>
-                <div class="mb-3 col-5">
-                      <label for="email" class="form-label text-light">Munkavállaló emailcíme</label>
-                      <input type="email" class="form-control" id="email">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="activeCheck">
+                    <label class="form-check-label" for="activeCheck">{{texts.switch}}</label>
                 </div>
             </div>
-            <div class="row">
-                <div class="mb-3 col-5">
-                    <label for="pass" class="form-label text-light">Válassz egy jelszót</label>
-                    <input type="password" class="form-control" id="pass">
-                </div>
-                <div class="mb-3 col-5">
-                    <label for="repass" class="form-label text-light">Add meg újra a jelszót</label>
-                    <input type="password" class="form-control" id="repass">
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-5">
-                    <label for="startDate" class="form-label text-light">Belépés dátuma</label>
-                    <input type="date" class="form-control" id="startDate">
-                </div>
-                <div class="mb-3 col-5 align-self-end">
-                    <select class="form-select" aria-label="WorkPlace">
-                        <option selected>Válaszd ki a munkavállaló munkavégzési helyét!</option>
-                        <!--TODO renderelés-->
-                        <option value="1">Árkád Budapest</option>
-                        <option value="2">Westend</option>
-                        <option value="3">Árkád Pécs</option>
-                        <option value="4">Corvin</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-5">
-                    <select class="form-select" aria-label="title">
-                        <option selected>Válaszd ki a munkavállaló beosztását!</option>
-                        <!--TODO renderelés-->
-                        <option value="1">Eladó</option>
-                        <option value="2">Műszakvezető</option>
-                        <option value="3">Üzletvezető-helyettes</option>
-                        <option value="4">Üzletvezető</option>
-                    </select>
-                </div>
-                <div class="mb-3 col-5">
-                    <select class="form-select" aria-label="workingHours">
-                        <option selected>Válaszd ki a munkavállaló heti óraszámát!</option>
-                        <option *ngFor="let hours of workingHours" value="{{hours}}">{{hours}}</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="activeCheck">
-                <label class="form-check-label" for="activeCheck">Munkavállaló aktiválása</label>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-light my-2">Mentés</button>
-        <!--TODO click event-->
-      </form>
+            <button type="submit" class="btn btn-light my-2">{{texts.submitButton}}</button>
+            <!--TODO click event-->
+          </form>
+    </div>
 </div>
